@@ -1,0 +1,20 @@
+{
+    "files.associations": {
+        "*.java": "java",
+        "*.html": "html",
+        "iostream": "cpp",
+        "iosfwd": "cpp",
+        "array": "cpp",
+        "bitset": "cpp",
+        "initializer_list": "cpp",
+        "regex": "cpp",
+        "utility": "cpp",
+        "valarray": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp",
+        "*.tcc": "cpp",
+        "list": "cpp",
+        "functional": "cpp",
+        "unordered_set": "cpp"
+    }
+}
