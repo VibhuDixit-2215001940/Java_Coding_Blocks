@@ -1,4 +1,6 @@
+package Day1;
 // import java.util.*;
+
 public class Graph_Client {
     public static void main(String[] args) {
         Graph gf = new Graph(4);
