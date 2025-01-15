@@ -12,5 +12,6 @@ public class Graph_Client2 {
         // System.out.println(gf.hasPath(1, 6, new HashSet<>()));
         // gf.printAllPath(1, 2, new HashSet<>(), "");
         System.out.println(gf.bfs(1, 6));
+        System.out.println(gf.dfs(1, 6));
     }
 }

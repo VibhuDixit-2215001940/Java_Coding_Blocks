@@ -66,4 +66,53 @@ public class Graph2 {
         }
         return false;
     }
+
+    public boolean dfs(int src, int des) {
+        Stack<Integer> st = new Stack<>();
+        HashSet<Integer> visited = new HashSet<>();
+        st.push(src);
+        while (!st.isEmpty()) {
+            // 1. remove
+            int rv = st.pop();
+            // 2. ignore if already visited
+            if (visited.contains(rv))
+                continue;
+            // 3. Markvisited
+            visited.add(rv);
+            // 4. Self work
+            if (rv == des)
+                return true;
+            // 5. Add unvisited
+            for (int nbrs : map.get(rv).keySet()) {
+                if (!visited.contains(nbrs))
+                    st.add(nbrs);
+            }
+        }
+        return false;
+    }
+
+    public void bft(int des) {
+        Queue<Integer> q = new LinkedList<>();
+        HashSet<Integer> visited = new HashSet<>();
+        for (int src : map.keySet()) {
+            q.add(src);
+            while (!q.isEmpty()) {
+                // 1. remove
+                int rv = q.poll();
+                // 2. ignore if already visited
+                if (visited.contains(rv))
+                    continue;
+                // 3. Markvisited
+                visited.add(rv);
+                // 4. Self work
+                System.out.println(rv + " ");
+                // 5. Add unvisited
+                for (int nbrs : map.get(rv).keySet()) {
+                    if (!visited.contains(nbrs))
+                        q.add(nbrs);
+                }
+            }
+            System.out.println();
+        }
+    }
 }
